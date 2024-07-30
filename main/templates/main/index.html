@@ -1,0 +1,42 @@
+{% extends 'main/layout.html' %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block content %}
+<div class="features">
+    <h1>{{ title }}</h1>
+    <p>semper absurdis retines querelis
+        ominum casus mihi caeca narras
+        ecce tempestas cita surgit et nunc
+        urbs adeunda
+
+        iam times Troiae Paridisque amori
+        mitte boletos: quotiens iubebam
+        nec premas fidum uelut arta uitis
+        hanc premit ulmum
+
+        fagus est testis mihi testis ilex
+        populi cortex memor usque seruat
+        nomen Oenones: legeris per aeuum
+        falce notata
+
+        quo prius discedo prius reuertar
+        flumine ex magno edita nympha uates
+        garris insulse: meus utque amor stat
+        Troia perennis</p>
+    <button class="btn btn-warning">На страницу про нас</button>
+
+    {% for el in values %}
+        {% if el == 'Hello' %}
+            <p>{{ el|upper }}</p>
+        {% endif %}
+    {% endfor %}
+
+    {% for el in obj %}
+        <p>{{ el }}</p>
+    {% endfor %}
+
+</div>
+
+    {% include 'main/test.html' %}
+{% endblock %}
